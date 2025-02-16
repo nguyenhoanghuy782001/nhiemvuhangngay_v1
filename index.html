@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+
+<head> <!-- Thứ start -->
+    <!-- <script type="text/javascript" src="config.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="jquery.countdown.min.js"></script> -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<style>
+    body {
+      background-image: url('./img/back.png');
+    }
+</style>
+<body onload="initClock()">
+    <div id="main" class="rainbow">
+        <form id="freeform">
+            <div class="header" id="header">
+                <p>Nhiệm vụ hằng ngày</p><br>
+                <!-- Thứ start -->
+                <!-- <div>
+                    <div class="datetime">
+                        <div class="date">
+                            <span id="dayname">Day</span>
+                        </div>
+                    </div>
+                </div> -->
+                <!-- Thứ end -->
+            </div>
+            <div class="contenitem">
+                <div class="slider">
+                    <div class="slides">
+                        <input type="radio" name="radio-btn" id="radio0">
+                        <input type="radio" name="radio-btn" id="radio1">
+                        <input type="radio" name="radio-btn" id="radio2">
+                        <input type="radio" name="radio-btn" id="radio3">
+                        <input type="radio" name="radio-btn" id="radio4">
+                        <input type="radio" name="radio-btn" id="radio5">
+                        <input type="radio" name="radio-btn" id="radio6">
+                        <div class="slide first">
+                            <div class="left">
+                                <div class="item">
+                                    <div class="imgitem"><img class="imge" src="./img/stingray.png"></div>
+                                    <div class="textitem">
+                                        <div class="text">
+                                            <p class="textname">Cá đuối</p>
+                                            <p class="textsoluong">10x</p>
+                                            <div class="item-slot-quality">
+                                                <div class="item-slot-quality-bar"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="center">
+                                <div class="item">
+                                    <div class="imgitem"><img class="imge" src="./img/wood_proc.png"></div>
+                                    <div class="textitem">
+                                        <div class="text">
+                                            <p class="textname">Ván gỗ</p>
+                                            <p class="textsoluong">15x</p>
+                                            <div class="item-slot-quality">
+                                                <div class="item-slot-quality-bar"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="right">
+                                <div class="item">
+                                    <div class="imgitem"><img class="imge" src="./img/steel.png"></div>
+                                    <div class="textitem">
+                                        <div class="text">
+                                            <p class="textname">Thép</p>
+                                            <p class="textsoluong">10x</p>
+                                            <div class="item-slot-quality">
+                                                <div class="item-slot-quality-bar"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="left">
+                                <div class="item">
+                                    <div class="imgitem"><img class="imge" src="./img/metalscrap.png"></div>
+                                    <div class="textitem">
+                                        <div class="text">
+                                            <p class="textname">Phế liệu kim loại</p>
+                                            <p class="textsoluong">10x</p>
+                                            <div class="item-slot-quality">
+                                                <div class="item-slot-quality-bar"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="center">
+                                <div class="item">
+                                    <div class="imgitem"><img class="imge" src="./img/glass.png"></div>
+                                    <div class="textitem">
+                                        <div class="text">
+                                            <p class="textname">Thủy tinh</p>
+                                            <p class="textsoluong">15x</p>
+                                            <div class="item-slot-quality">
+                                                <div class="item-slot-quality-bar"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="right">
+                                <div class="item">
+                                    <div class="imgitem"><img class="imge" src="./img/fishingboot.png"></div>
+                                    <div class="textitem">
+                                        <div class="text">
+                                            <p class="textname">Giày thối</p>
+                                            <p class="textsoluong">1x</p>
+                                            <div class="item-slot-quality">
+                                                <div class="item-slot-quality-bar"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="left">
+                                <div class="item">
+                                    <div class="imgitem"><img class="imge" src="./img/plastic.png"></div>
+                                    <div class="textitem">
+                                        <div class="text">
+                                            <p class="textname">Nhựa</p>
+                                            <p class="textsoluong">10x</p>
+                                            <div class="item-slot-quality">
+                                                <div class="item-slot-quality-bar"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="center">
+                                <div class="item">
+                                    <div class="imgitem"><img class="imge" src="./img/aluminum.png"></div>
+                                    <div class="textitem">
+                                        <div class="text">
+                                            <p class="textname">Nhôm</p>
+                                            <p class="textsoluong">15x</p>
+                                            <div class="item-slot-quality">
+                                                <div class="item-slot-quality-bar"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="right">
+                                <div class="item">
+                                    <div class="imgitem"><img class="imge" src="./img/killerwhale.png"></div>
+                                    <div class="textitem">
+                                        <div class="text">
+                                            <p class="textname">Cá voi sát thủ</p>
+                                            <p class="textsoluong">1x</p>
+                                            <div class="item-slot-quality">
+                                                <div class="item-slot-quality-bar"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="left">
+                                <div class="item">
+                                    <div class="imgitem"><img class="imge" src="./img/stingray.png"></div>
+                                    <div class="textitem">
+                                        <div class="text">
+                                            <p class="textname">Cá đuối</p>
+                                            <p class="textsoluong">10x</p>
+                                            <div class="item-slot-quality">
+                                                <div class="item-slot-quality-bar"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="center">
+                                <div class="item">
+                                    <div class="imgitem"><img class="imge" src="./img/rubber.png"></div>
+                                    <div class="textitem">
+                                        <div class="text">
+                                            <p class="textname">Cao su</p>
+                                            <p class="textsoluong">15x</p>
+                                            <div class="item-slot-quality">
+                                                <div class="item-slot-quality-bar"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="right">
+                                <div class="item">
+                                    <div class="imgitem"><img class="imge" src="./img/fishingtin.png"></div>
+                                    <div class="textitem">
+                                        <div class="text">
+                                            <p class="textname">Hộp thiếc</p>
+                                            <p class="textsoluong">1x</p>
+                                            <div class="item-slot-quality">
+                                                <div class="item-slot-quality-bar"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="left">
+                                <div class="item">
+                                    <div class="imgitem"><img class="imge" src="./img/aluminum.png"></div>
+                                    <div class="textitem">
+                                        <div class="text">
+                                            <p class="textname">Nhôm</p>
+                                            <p class="textsoluong">15x</p>
+                                            <div class="item-slot-quality">
+                                                <div class="item-slot-quality-bar"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="center">
+                                <div class="item">
+                                    <div class="imgitem"><img class="imge" src="./img/wood_proc.png"></div>
+                                    <div class="textitem">
+                                        <div class="text">
+                                            <p class="textname">Ván gỗ</p>
+                                            <p class="textsoluong">10x</p>
+                                            <div class="item-slot-quality">
+                                                <div class="item-slot-quality-bar"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="right">
+                                <div class="item">
+                                    <div class="imgitem"><img class="imge" src="./img/fishingboot.png"></div>
+                                    <div class="textitem">
+                                        <div class="text">
+                                            <p class="textname">Giày thối</p>
+                                            <p class="textsoluong">1x</p>
+                                            <div class="item-slot-quality">
+                                                <div class="item-slot-quality-bar"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="left">
+                                <div class="item">
+                                    <div class="imgitem"><img class="imge" src="./img/flounder.png"></div>
+                                    <div class="textitem">
+                                        <div class="text">
+                                            <p class="textname">Cá bơn</p>
+                                            <p class="textsoluong">10x</p>
+                                            <div class="item-slot-quality">
+                                                <div class="item-slot-quality-bar"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="center">
+                                <div class="item">
+                                    <div class="imgitem"><img class="imge" src="./img/bass.png"></div>
+                                    <div class="textitem">
+                                        <div class="text">
+                                            <p class="textname">Cá vược</p>
+                                            <p class="textsoluong">15x</p>
+                                            <div class="item-slot-quality">
+                                                <div class="item-slot-quality-bar"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="right">
+                                <div class="item">
+                                    <div class="imgitem"><img class="imge" src="./img/metalscrap.png"></div>
+                                    <div class="textitem">
+                                        <div class="text">
+                                            <p class="textname">Phế liệu kim loại</p>
+                                            <p class="textsoluong">10x</p>
+                                            <div class="item-slot-quality">
+                                                <div class="item-slot-quality-bar"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="left">
+                                <div class="item">
+                                    <div class="imgitem"><img class="imge" src="./img/glass.png"></div>
+                                    <div class="textitem">
+                                        <div class="text">
+                                            <p class="textname">Thủy tinh</p>
+                                            <p class="textsoluong">10x</p>
+                                            <div class="item-slot-quality">
+                                                <div class="item-slot-quality-bar"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="center">
+                                <div class="item">
+                                    <div class="imgitem"><img class="imge" src="./img/wood_proc.png"></div>
+                                    <div class="textitem">
+                                        <div class="text">
+                                            <p class="textname">Ván gỗ</p>
+                                            <p class="textsoluong">15x</p>
+                                            <div class="item-slot-quality">
+                                                <div class="item-slot-quality-bar"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="right">
+                                <div class="item">
+                                    <div class="imgitem"><img class="imge" src="./img/tienban.png"></div>
+                                    <div class="textitem">
+                                        <div class="text">
+                                            <p class="textname">Tiền bẩn</p>
+                                            <p class="textsoluong">100x</p>
+                                            <div class="item-slot-quality">
+                                                <div class="item-slot-quality-bar"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="navigation-auto">
+                            <div class="auto-btn0"></div>
+                            <div class="auto-btn1"></div>
+                            <div class="auto-btn2"></div>
+                            <div class="auto-btn3"></div>
+                            <div class="auto-btn4"></div>
+                            <div class="auto-btn5"></div>
+                            <div class="auto-btn6"></div>
+                        </div>
+                    </div>
+                    <div class="navigation-maunal">
+                        <label for="radio0" class="maunal-btn"></label>
+                        <label for="radio1" class="maunal-btn"></label>
+                        <label for="radio2" class="maunal-btn"></label>
+                        <label for="radio3" class="maunal-btn"></label>
+                        <label for="radio4" class="maunal-btn"></label>
+                        <label for="radio5" class="maunal-btn"></label>
+                        <label for="radio6" class="maunal-btn"></label>
+                    </div>
+                    <button type="submit" id="submitbtn">Nhận thưởng</button>
+                </div>
+            </div>
+            
+        </form>
+        <script type="text/javascript" src="script.js"></script>
+    
+    
+    </div>
+</body>
+</html>
